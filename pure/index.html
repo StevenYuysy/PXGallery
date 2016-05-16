@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HeyJax</title>
+    <!--<link rel="stylesheet" href="pxgallery.css">-->
+    <!--inject:css-->
+    <link rel="stylesheet" href="css/main.min.css">
+    <!--endinject-->
+</head>
+<body>
+    <header class="row">
+        <span>PXGallery</span>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Upload</a></li>
+                <li id="edit"><a href="#">Edit</a></li>
+                <li id="customize">
+                    <a href="#">Customize</a>
+                    <ul class="submenu hidden">
+                        <li data-layout="puzzle">Puzzle layout</li>
+                        <li data-layout="waterfall">Waterfall layout</li>
+                        <li data-layout="barrel">Barrel layout</li>
+                        <li data-layout="square">Square layout</li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <section class="edit">
+            <div id="add"><span>Add</span></div>
+            <div id="select"><span>Select</span></div>
+            <div id="remove"><span>Remove</span></div>
+            <div id="count"><span></span></div>
+        </section>
+    </header>
+    <main>
+        <section class="location">
+            <ul>
+                <li>Home</li>
+                <li> > MyGallery</li>
+            </ul>
+        </section>
+        <div class="pxgalleryContainer"></div> 
+    </main>
+    <footer>
+        <a href="#"><span id="github">Github</span></a>
+        <a href="#top"><span id="backtotop">BackToTop</span></a>    
+    </footer>
+    <script src="js/pxgallery.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@mixin box {
+  border: #999 1px solid;
+  background-color: #eee;
+  height: 50px;
+}
+$grid-columns:      12;
+
+@mixin clearfix {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row {
+  @include clearfix;
+}
+
+// Make the element grid-ready (applying everything but the width)
+@mixin make-col {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+// Set a width (to be used in or out of media queries)
+// @mixin make-col-span($columns) {
+//   width: percentage(($columns / $grid-columns));
+// }
+
+// .row {
+//   @include make-row();
+// }
+// .box{
+//   @include box;
+// }
+
+// @for $i from 1 through $grid-columns {
+//   .col-md-#{$i} { @media only screen and (min-width: 769px) { @include make-col-span($i);@include make-col;} }
+//   .col-sm-#{$i} { @media only screen and (max-width: 768px) { @include make-col-span($i);@include make-col;} }
+// }

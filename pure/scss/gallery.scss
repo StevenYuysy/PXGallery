@@ -1,0 +1,23 @@
+
+main{
+  padding-top: 5rem;
+  
+  .location {
+    padding-bottom: 5rem;
+    
+    ul {
+      padding-left: 3rem;
+      
+      li {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+  }
+  .pxgalleryContainer {
+    .selected {
+      border: 0.85rem solid $light_blue;
+    }
+  }
+  
+}

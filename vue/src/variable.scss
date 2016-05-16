@@ -1,0 +1,27 @@
+// define color
+$black:             #111;
+$nav_gray:          #2f2f38;
+$dark_gray:         #3a3a3a;
+$main_gray:         #4a4a4a;
+$gray:              #929292;
+$font_gray:         #edecee;
+$bg_gray:           #f8f8f8;
+$light_blue:        #7C7EFF;
+$blue:              #2F33FF;
+$gray_blue:         #3E3F7F;
+$dark_blue:         #18197F;
+$white:             #fff;
+$activeColor:       $bg_gray;
+// mixin
+@mixin hover {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+   -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;  
+	&:hover {
+		color: #111;
+		background-color: $activeColor;
+	}
+}

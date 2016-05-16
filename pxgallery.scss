@@ -1,0 +1,243 @@
+.pxgalleryContainer {
+  // Your custome style 
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  
+  .pxgalleryBox {
+    position: relative;
+    box-sizing: border-box;
+  }
+}
+  
+
+// PUZZLE style
+// One image box selected
+.puzzle-1 {
+  .pxgalleryBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  }
+}
+// Two image boxes selected
+.puzzle-2 {
+  .pxgalleryBox:nth-child(1) {
+    position: absolute;
+    left: 0;
+    width: 66.6%;
+    height: 100%;
+    // clip-path: url('img/clipPath.svg#clip1');
+    -webkit-clip-path: polygon(0% 0%,100% 0%,50% 100%,0% 100%);
+  }
+.pxgalleryBox:nth-child(2) {
+    position: absolute;
+    right: 0;
+    width: 66.6%;
+    height: 100%;
+    left: 33.333%;
+    // clip-path: url('img/clipPath.svg#clip2');
+    -webkit-clip-path: polygon(50% 0%,100% 0%,100% 100%,0% 100%);
+  }
+} 
+//THree image boxes selected
+.puzzle-3 {
+  .pxgalleryBox:nth-child(1) {
+    float: left;
+    width: 66.6%;
+    height: 100%;
+  }
+  .pxgalleryBox:nth-child(2) {
+    float: left;
+    width: 33.4%;
+    height: 50%;
+  }
+  .pxgalleryBox:nth-child(3) {
+    float: left;
+    width: 33.4%;
+    height: 50%;
+  }
+}
+//Four image boxes selected
+.puzzle-4 {
+  .pxgalleryBox {
+    float: left;
+    width: 50%;
+    height: 50%;
+  }
+}
+//Five image boxes selected
+.puzzle-5 {
+  .pxgalleryBox {
+    position: absolute;
+  }
+  .pxgalleryBox:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 66.6%;
+    height: 66.6%;
+  }
+  .pxgalleryBox:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 33.4%;
+    height: 66.6%;
+  }
+  .pxgalleryBox:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 33.3%;
+    height: 33.4%;
+  }
+  .pxgalleryBox:nth-child(4) {
+    bottom: 0;
+    left: 33.333%;
+    width: 33.333%;
+    height: 33.4%;
+  }
+  .pxgalleryBox:nth-child(5) {
+    bottom: 0;
+    left: 0;
+    width: 33.333%;
+    height: 33.4%;
+  }
+}
+//Six image boxes selected
+.puzzle-6 {
+  .pxgalleryBox {
+    float: left;
+    width: 33.3%;
+    height: 33.3%;
+  }
+  .pxgalleryBox:nth-child(1) {
+    width: 66.6%;
+    height: 66.6%;
+  }
+  .pxgalleryBox:nth-child(2),
+  .pxgalleryBox:nth-child(3),
+  .pxgalleryBox:nth-child(4) {
+    float: right;
+    width: 33.4%;
+  }
+}
+@for $i from 1 through 6 {
+  .puzzle-#{$i} {
+    img { 
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+//WATERFALL style
+.waterfallColumn {
+  float: left;
+  
+  img {
+    width: 100%;
+  }
+}
+
+//BARREL style
+.barrel {
+  white-space: nowrap;
+  
+  .pxgalleryBox {
+    display: inline-block;
+    
+    img {
+      height: 100%;
+    }
+  }
+}
+
+// SQUARE style
+.square {
+  
+    @for $i from 1 through 12 {
+      .col-md-#{$i} { @media only screen and (min-width: 769px) { 
+        width: percentage(( $i / 12 )); 
+        float: left;
+        overflow: hidden;
+       }}
+       
+      .col-sm-#{$i} { @media only screen and (max-width: 768px) { 
+        width: percentage(( $i / 12 )); 
+        float: left;
+        overflow: hidden;
+       }}
+    }
+    .pxgalleryBox {
+
+       &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+        
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+}
+
+//FULLSCREEN style
+.pxfullscreen {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .pxnext {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    border-top: 30px solid transparent;
+	  border-bottom: 30px solid transparent;
+	  border-left: 30px solid lightgray;
+    transition: .5s ease-in-out;
+    
+    &:hover {
+      border-left-color: white;
+    }
+  }
+  
+  .pxprev{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    border-top: 30px solid transparent;
+	  border-bottom: 30px solid transparent; 
+    border-right:30px solid lightgray; 
+    
+    transition: .5s ease-in-out;
+    
+    &:hover {
+      border-right-color: white;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+

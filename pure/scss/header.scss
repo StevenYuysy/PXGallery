@@ -1,0 +1,64 @@
+header {
+  height: 3rem;
+  background-color: $nav_gray;
+  color: $gray;
+  font-size: 1rem;
+  line-height: 3rem;
+  position: relative;
+  
+  span {
+    font-size: 2rem;
+    position: absolute;
+    left: 1rem;  
+    font-weight: bold;
+  }
+  
+  ul.menu{
+    text-align: center;
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 5rem; 
+      a {
+        display: block;
+        @include hover; 
+      }
+    }
+  }
+  ul.submenu {
+    position: absolute;
+    z-index: 2;
+    
+    li {
+      font-size: 1rem;
+      width: 10rem;
+      display: block;
+      color: $white;
+      background-color: $nav_gray;
+      cursor: pointer;
+      @include hover;
+    }
+  }
+  
+  .edit {
+    height: 3rem;
+    background-color: $light_blue;
+    color: $white;
+    
+    
+    div {
+      width: 5rem;
+      height: 3rem;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      @include hover;
+      
+      span {
+        font-size: 0.75rem;
+        font-weight: lighter;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,22 @@
+footer {
+  margin-top: 10rem;
+  padding: 3rem 0;
+  position: relative;
+  font-size: 1rem;
+  background-color: $dark_gray;
+  
+  #github {
+    position: absolute;
+    left: 3rem;
+  }
+  
+  #backtotop {
+    position: absolute;
+    right:3rem;
+    background-image: url('../img/backtotop.png');
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+
+  }
+}
