@@ -11,19 +11,19 @@ PXGallery is a library which can set different layouts in pure javascript withou
 ## Easy setup
 Commonly, you can just install it with a css and javascript:
 
-```
+```html
 <link rel="stylesheet" href="css/pxgallery.min.css">
 ```
 
 Include the Gallery script at the bottom of the body of your webpage:
 
-```
+```html
 <script src="js/pxgallery.js">
 ```
 
 And then, set the image and the layouts:
 
-```
+```JavaScript
 var pxgallery = new pxgallery();
 pxgallery.setImage([
     "http://placehold.it/1300x1600/E97452/fff",
@@ -44,13 +44,13 @@ pxgallery.setImage([
 You can also use module to include the library just like the demo above, here are some examples:
 
 ES 6
-```
+```JavaScript
 import pxgallery from 'lib/pxgallery.js'
 ```
 
 AMD
 
-```
+```JavaScript
 requirejs(['pxgallery'], function( pxgallery ) {
     // some code here
 });
@@ -62,7 +62,7 @@ Here are defalut options:
 
 When new an object:
 
-```
+```JavaScript
 var pxgallery = new pxgallery({
   containerSelector:  '.pxgalleryContainer',
   fullscreenSelector: '.pxfullscreen',
@@ -72,7 +72,7 @@ var pxgallery = new pxgallery({
 
 When set the images:
 
-```
+```JavaScript
 pxgallery.setImage({
   
     layout:           2,
@@ -88,7 +88,7 @@ pxgallery.setImage({
 
 Available layouts:
 
-```
+```JavaScript
  this.layout = {
       NONE: 0,      // no layout
       PUZZLE: 1,    // puzzle layout
@@ -100,7 +100,7 @@ Available layouts:
 
 # API
 
-```
+```JavaScript
 /**
   * init the album
   * It will replace the photos
