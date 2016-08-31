@@ -109,7 +109,7 @@ Available layouts:
   */
   
 pxgallery.setImage();
-`
+
 
 /**
   * get the DOM elements which contain the images
