@@ -1,6 +1,6 @@
 /**
  *
- * pxgallery v0.0.1
+ * pxgallery v0.0.2
  * use with pxgallery.css
  * @author StevenYu
  */
@@ -27,7 +27,6 @@
 
   var pxgallery = function(opts) {
 
-
     opts = opts || {};
     var fullscreenSelector = opts.fullscreenSelector || '.pxfullscreen';
 
@@ -50,21 +49,22 @@
    * @private
    */
 
-   var _options = {
-     layout : '',
-     puzzleHeight:'',
-     coulumn : '',
-     heightMin : '',
-     gutter : '',
-     mdSquareSize:'',
-     smSquareSize:'',
-     fullscreenState : '',
-     images: []
-   }
+  var _options = {
+    layout : '',
+    puzzleHeight:'',
+    coulumn : '',
+    heightMin : '',
+    gutter : '',
+    mdSquareSize:'',
+    smSquareSize:'',
+    fullscreenState : '',
+    images: []
+  };
 
    // create a fullscreen for images with next and prev
-   var _createFullscreen = function(event) {
-     if (event.target.getAttribute('src').trim()) {
+  function _createFullscreen(event) {
+
+    if (event.target.getAttribute('src').trim()) {
       var fullscreen = document.createElement('div');
       var img = document.createElement('img');
       var next = document.createElement('span');
@@ -95,11 +95,12 @@
       fullscreen.appendChild(next);
       fullscreen.appendChild(img);
       this.parentNode.appendChild(fullscreen);
-     }
-   };
+    }
+  };
 
    // add the box into column or row
-   var _addBox = function(ele, index) {
+  function _addBox(ele, index) {
+
     switch (_options.layout) {
       case 2:
       this.columns ? this.columns[index].appendChild(ele) : this.container.appendChild(ele);
@@ -111,7 +112,7 @@
       this.container.appendChild(ele);
       this.setLayout(_options.layout);
     }
-  }
+  };
 
 
   /**
@@ -282,6 +283,7 @@
    */
 
   pxgallery.prototype.getLayout = function() {
+
     return _options.layout;
   };
 
@@ -319,7 +321,7 @@
   /**
    * NOT RECOMMAND, it may effect the perfomance of the browser cause it change the DOM directly
    * set the gutter between images
-   * @param {Number} - gutter
+   * @param {Number} gutter
    */
 
   pxgallery.prototype.setGutter = function(gutter) {
@@ -470,7 +472,7 @@
 
   /**
    * calculate the ratio
-   * @return {Object} - rows
+   * @return {Object} rows
    */
 
   pxgallery.prototype.setBarrelBin = function() {
@@ -512,7 +514,7 @@
   /**
    * NOT RECOMMAND, it may effect the perfomance of the browser cause it change the DOM directly
    * set the height of the barrel
-   * @param {Number} - min
+   * @param {Number} min
    */
 
   pxgallery.prototype.setBarrelHeight = function(min) {
