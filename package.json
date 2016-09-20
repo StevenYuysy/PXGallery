@@ -1,0 +1,23 @@
+{
+  "name": "pxgallery",
+  "version": "1.0.0",
+  "description": "A easy to use javascript plugin for different image layouts.",
+  "main": "pxgallery.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenYuysy/PXGallery.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Plugin"
+  ],
+  "author": "stevenYuysy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StevenYuysy/PXGallery/issues"
+  },
+  "homepage": "https://github.com/StevenYuysy/PXGallery#readme"
+}
