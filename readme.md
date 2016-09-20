@@ -1,6 +1,8 @@
 # Description
 
-PXGallery is a library which can set different layouts in pure javascript without any dependencies. 
+![](https://api.travis-ci.org/StevenYuysy/PXGallery.svg)
+
+PXGallery is a library which can set different layouts in pure javascript without any dependencies.
 
 # Demo
 
@@ -74,12 +76,12 @@ When set the images:
 
 ```JavaScript
 pxgallery.setImage({
-  
+
     layout:           2,
     puzzleHeight:     400,
     fullscreenState:  true,
     column:           5,
-    heightMin:        150, 
+    heightMin:        150,
     mdSquareSize:     3,
     smSquareSize:     6,
     gutter:           10
@@ -107,7 +109,7 @@ Available layouts:
   * @param {(Stirng | String[])} image - the URL of the photo or the URL array of the photos
   * @param {Object} opts - layout options
   */
-  
+
 pxgallery.setImage();
 
 
@@ -115,7 +117,7 @@ pxgallery.setImage();
   * get the DOM elements which contain the images
   * @return {HTMLelement[]} boxes
   */
-   
+
 pxgallery.getImageDomElements();
 
 /**
@@ -164,7 +166,7 @@ pxgallery.setGutter();
 /**
   * enable fullscreen
   */
-   
+
 pxgallery.enableFullscreen() ;
 
 /**
@@ -227,7 +229,7 @@ pxgallery.initBarrelBin();
   * calculate the ratio
   * @return {Object} - rows
   */
-  
+
 pxgallery.setBarrelBin();
 
 /**
