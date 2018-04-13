@@ -6,7 +6,7 @@ PXGallery is a library which can set different layouts in pure javascript withou
 
 # Demo
 
-[Demo](http://heyjax.github.io/demo/stage_4/vue/index.html#!/)
+[Demo](http://stevenyuysy.github.io/PXGallery/#!/setting)
 
 # Setup
 
